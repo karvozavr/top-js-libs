@@ -3,6 +3,8 @@ package ru.karvozavr.toplibs.downloader;
 import org.jetbrains.annotations.NotNull;
 import ru.karvozavr.toplibs.data.Page;
 
+import java.util.Optional;
+
 public interface WebPageDownloader {
 
     /**
@@ -12,5 +14,5 @@ public interface WebPageDownloader {
      * @return the downloaded page
      */
     @NotNull
-    Page downloadPage(@NotNull String url);
+    Optional<Page> downloadPage(@NotNull String url);
 }
